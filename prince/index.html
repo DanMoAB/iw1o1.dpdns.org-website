@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小王子 The Little Prince</title>
+    <style>
+        /* 添加一些简单的样式，让图片显示更美观 */
+        img {
+            display: block; /* 每张图片独占一行 */
+            margin: 10px auto; /* 水平居中，上下有间距 */
+            max-width: 100%; /* 确保图片不会超出容器宽度 */
+            height: auto; /* 保持图片的宽高比例 */
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <!-- 动态生成图片 -->
+        <script>
+            // 获取图片容器
+            const container = document.getElementById('image-container');
+
+            // 图片数量
+            const totalImages = 160;
+
+            // 循环生成图片
+            for (let i = 1; i <= totalImages; i++) {
+                // 创建图片元素
+                const img = document.createElement('img');
+                // 设置图片的src属性
+                img.src = `/res/${i.toString().padStart(3, '0')}.jpg`;
+                // 将图片添加到容器中
+                container.appendChild(img);
+            }
+        </script>
+    </div>
+</body>
+</html>
