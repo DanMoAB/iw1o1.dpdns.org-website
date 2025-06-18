@@ -244,6 +244,7 @@ px为散射像素*/
 
 /* Footer styling */
 footer {
+    z-index: 13
     background-color: #333;
     color:#fff;
     border-top: 1px solid #ddd; /* Top border */
