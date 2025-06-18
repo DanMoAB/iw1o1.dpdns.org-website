@@ -226,7 +226,7 @@
 /* 折叠按钮样式 */
 .toggle-sidebar {
     position: absolute;
-    top: 20px;
+    top: 23px;
     right: 10px;
     background: linear-gradient(to right, rgba(99, 226, 183, 0.75), rgba(42, 148, 125, 0.8));
     color: #fff;
@@ -248,7 +248,7 @@
 }
 
 .sidebar.collapsed .toggle-sidebar {
-    right: 5px; /* 调整按钮位置 */
+    right: 4px; /* 调整按钮位置 */
 }
 .main-content {
     margin-left: 170px;
