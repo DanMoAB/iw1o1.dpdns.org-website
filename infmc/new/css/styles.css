@@ -192,7 +192,7 @@ px为散射像素*/
     position: fixed;
     top: 80px;
     left: 10px;
-    width: 140px;
+    width: 160px;
     height: calc(300px);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     backdrop-filter: blur(10px);
@@ -229,7 +229,7 @@ px为散射像素*/
 /* 折叠按钮样式 */
 .toggle-sidebar {
     position: absolute;
-    top: 10px;
+    top: 13px;
     right: 10px;
     background-color: #333;
     color: #fff;
