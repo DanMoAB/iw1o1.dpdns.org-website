@@ -260,6 +260,7 @@ px为散射像素*/
     margin: 0 auto;
     background: linear-gradient(to right, rgba(99, 226, 183, 0.75), rgba(42, 148, 125, 0.8));
     color: white;
+    border-radius: 15px;
     font-size: 15px;
     padding: 10px 20px;
     border-radius: var(--border-radius);
