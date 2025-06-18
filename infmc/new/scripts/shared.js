@@ -57,10 +57,12 @@ function redirectToDonate() {
 }
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".sidebar");
+    const mainContent = document.querySelector(".main-content");
     const toggleButton = document.querySelector(".toggle-sidebar");
 
     // 切换折叠状态
     toggleButton.addEventListener("click", function () {
         sidebar.classList.toggle("collapsed");
+        mainContent.classList.toggle("collapsed");
     });
 });

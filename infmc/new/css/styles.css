@@ -260,7 +260,7 @@
     top: 3.5px;
 }
 
-.sidebar.collapsed  .main-content {
+.main-content.collapsed {
     margin-left: 60px;
 }
 
