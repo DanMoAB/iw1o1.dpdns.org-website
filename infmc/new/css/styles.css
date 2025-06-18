@@ -193,6 +193,7 @@ px为散射像素*/
     top: 80px;
     left: 10px;
     width: 140px;
+    bottom:340px
     height: calc(300px);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     backdrop-filter: blur(10px);
@@ -203,11 +204,6 @@ px为散射像素*/
     overflow-y: auto;
 }
 
-/* 新增动态调整的样式 */
-.sidebar-docked {
-    position: absolute; /* 绝对定位，用于停靠在 footer 上 */
-    bottom: 100%; /* 停靠在 footer 的顶部 */
-}
 .sidebar h2 {
     font-size: 1.25rem;
     margin-bottom: 10px;
