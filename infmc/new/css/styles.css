@@ -248,7 +248,7 @@
 }
 
 .sidebar.collapsed .toggle-sidebar {
-    right: 0px; /* 调整按钮位置 */
+    right: 5px; /* 调整按钮位置 */
 }
 .main-content {
     margin-left: 170px;
