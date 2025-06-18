@@ -229,7 +229,7 @@ px为散射像素*/
 /* 折叠按钮样式 */
 .toggle-sidebar {
     position: absolute;
-    top: 18px;
+    top: 20px;
     right: 10px;
     background-color: #333;
     color: #fff;
