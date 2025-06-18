@@ -1,38 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-cn">
-<head>
-    <script src="scripts/shared.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主页 - IceWars1o1</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>主页 - IceWars1o1</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>主页 - IceWars1o1</h1>
+            </div>
+        </header>
         <div class="container">
-            <h1>主页 - IceWars1o1</h1>
+            <div class="contents">
+                <h2>目录</h2> <button onclick="redirectToGames()">游戏列表</button>
+                <div class="dropdown"><button class="dropdown-btn">InfMC - 新世纪 介绍</button>
+                    <div class="dropdown-content"><a href="javascript:void(0);" onclick="redirectToInfMCIndividual()">个人</a> <a href="javascript:void(0);" onclick="redirectToInfMCTeam()">集体</a>
+                    </div>
+                </div> <button onclick="redirectToPrince()">小王子笔记</button>
+            </div>
         </div>
-    </header>
-    <div class="container">
-        <div class="contents">
-            <h2>目录</h2>
-            <button onclick="redirectToGames()">游戏列表</button>
-            <div class="dropdown">
-                <button class="dropdown-btn">InfMC - 新世纪 介绍</button>
-                <div class="dropdown-content">
-                    <a href="javascript:void(0);" onclick="redirectToInfMCIndividual()">个人</a>
-                    <a href="javascript:void(0);" onclick="redirectToInfMCTeam()">集体</a>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p>© 2025 IceWars1o1. All rights reserved.</p>
+                    <p>This project is licensed under the <a href="https://iw1o1.dpdns.org/copyright">MIT License</a>.</p>
                 </div>
             </div>
-            <button onclick="redirectToPrince()">小王子笔记</button>
-        </div>
-    </div>
-    <footer>
-        <div class="container">
-            <p onclick="redirectToCopyright()">Copyright (C) IceWars1o1 2025</p>
-        </div>
-    </footer>
-    <script>
+        </footer>
+        <script>
         // 获取下拉按钮和下拉内容
         const dropdownBtn = document.querySelector('.dropdown-btn');
         const dropdownContent = document.querySelector('.dropdown-content');
@@ -66,5 +64,5 @@
             window.location.href = "https://prince.iw1o1.dpdns.org/";
         }
     </script>
-</body>
+    </body>
 </html>

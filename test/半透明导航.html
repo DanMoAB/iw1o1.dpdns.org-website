@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <style>
+        .hidden-section {
+            display: none;
+        }
+        .image {
+            left: 20px;
+            right: 20px;
+            max-width: 100%;
+        }
+
+        /* 设置页面背景颜色为灰黑色 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            padding-top: 70px; /* 为页面内容添加内边距，避免被导航栏遮挡 */
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background: rgba(255, 255, 255, 0.01); /* 半透明白色背景，最后一个参数为不透明度 */
+            backdrop-filter: blur(10px); /* 背景模糊效果，{n}px为散射像素 */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed; /* 固定在页面顶部 */
+            top: 10px; /* 距离页面顶部的间距 */
+            left: 10px; /* 距离页面左侧的间距 */
+            right: 10px; /* 距离页面右侧的间距 */
+            z-index: 10; /* 确保导航栏在页面内容上方 */
+            border-radius: 50px; /* 胶囊形状 */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+            max-width: calc(100% - 20px); /* 限制最大宽度，确保左右间距 */
+            margin: 0 auto; /* 水平居中 */
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: nowrap; /* 确保菜单项在同一行 */
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .navbar ul li a, .navbar ul li span{
+            text-decoration: none;
+            color: #fff; /* 文字颜色为白色 */
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 20px; /* 胶囊形状 */
+            transition: all ease 0.5s;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background: #fff; /* 高亮背景颜色 */
+            color: #333; /* 高亮文字颜色 */
+        }
+
+        /* 页面内容 */
+        .content {
+            padding: 20px;
+        }
+
+        /* 媒体查询：当屏幕宽度小于 768px 时 */
+        @media (max-width: 768px) {
+            .navbar ul li {
+                margin-right: 10px; /* 减小间距以适应小屏幕 */
+            }
+
+            .navbar ul li a, .navbar ul li span {
+                font-size: 15px; /* 减小字体大小以适应小屏幕 */
+                padding: 7px 11px; /* 减小内边距以适应小屏幕 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" onclick="showSection('home'); scrollToTop(); return false;" id="home-link">首页</a></li>
+            <li><a href="#more" onclick="showSection('more'); scrollToTop(); return false;" id="more-link">更多</a></li>
+            <li><span onclick="scrollToTop(); return false;" id="top-link">顶部</span></li>
+        </ul>
+    </nav>
+    <section id="home" class="hidden-section">
+        <div class="content">
+            <h1>主页</h1>
+            <p>为了方便随便放了张公网图片当做图片测试</p>
+            <img class="image" src="https://www.minebbs.com/data/attachments/91/91428-b02d190892964b93e4940f264b933366.jpg?hash=sC0ZCJKWS5" alt="2025-01-25_23.42.02.png">
+            <p>这是一个示例页面，展示胶囊型悬浮导航栏的效果。您可以滚动页面，导航栏将始终保持在顶部。</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </section>
+    <section id="more" class="hidden-section">
+        <div class="content">
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+            <p>更多内容...</p>
+        </div>
+    </section>
+    <script>
+        // 显示指定的section
+        function showSection(id) {
+            // 隐藏所有section
+            document.querySelectorAll('.hidden-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // 显示目标section
+            document.getElementById(id).style.display = 'block';
+
+            // 移除所有导航链接的高亮样式
+            document.querySelectorAll('.navbar ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // 为当前导航链接添加高亮样式
+            document.getElementById(id + '-link').classList.add('active');
+        }
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0, // 滚动到页面顶部
+                behavior: 'smooth' // 平滑滚动
+            });
+        }
+
+        // 页面加载时默认显示首页并高亮“首页”导航链接
+        window.onload = function() {
+            showSection('home');
+        };
+    </script>
+</body>
+</html>
