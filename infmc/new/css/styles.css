@@ -221,8 +221,9 @@ px为散射像素*/
     top: 80px;
     /* 避免被导航栏遮挡*/
     left: 10px;
+    bottom:180px
     width: 140px;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 260px);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     backdrop-filter: blur(10px);
     border-radius: 15px;
