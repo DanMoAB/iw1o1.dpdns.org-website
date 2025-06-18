@@ -21,10 +21,7 @@
     background: rgba(255, 255, 255, 0.01);
     /* 半透明白色背景，最后一个参数为不透明度*/
     backdrop-filter: blur(10px);
-    /* 背景模糊效果， {
-    n
-}
-px为散射像素*/
+    /* 背景模糊效果， {n}px为散射像素*/
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -231,7 +228,7 @@ px为散射像素*/
     position: absolute;
     top: 20px;
     right: 10px;
-    background-color: #333;
+    background: linear-gradient(to right, rgba(99, 226, 183, 0.75), rgba(42, 148, 125, 0.8));
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -251,7 +248,7 @@ px为散射像素*/
 }
 
 .sidebar.collapsed .toggle-sidebar {
-    right: -10px; /* 调整按钮位置 */
+    right: 0px; /* 调整按钮位置 */
 }
 .main-content {
     margin-left: 170px;
