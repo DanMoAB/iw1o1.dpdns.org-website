@@ -223,7 +223,7 @@ px为散射像素*/
     left: 10px;
     bottom:240px
     width: 140px;
-    height: calc(100vh - 320px);
+    height: calc(300px);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     backdrop-filter: blur(10px);
     border-radius: 15px;
