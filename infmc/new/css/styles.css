@@ -204,9 +204,9 @@ px为散射像素*/
 }
 
 /* 新增动态调整的样式 */
-.sidebar-scroll {
-    position: absolute; /* 绝对定位，用于滚动到 footer 时 */
-    bottom: 100%; /* 使 sidebar 完全隐藏在 footer 上方 */
+.sidebar-docked {
+    position: absolute; /* 绝对定位，用于停靠在 footer 上 */
+    bottom: 100%; /* 停靠在 footer 的顶部 */
 }
 .sidebar h2 {
     font-size: 1.25rem;
