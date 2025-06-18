@@ -249,7 +249,7 @@ px为散射像素*/
 /* Footer styling*/
     footer {
     z-index: 13 background-color: #333;
-    color:#fff;
+    color: #fff;
     border-top: 1px solid #ddd;
     /* Top border*/
     padding: 2rem 0;
@@ -258,6 +258,19 @@ px为散射像素*/
     /* Space between content and footer*/
     
 }
+@media screen and (orientation: landscape) and (max-height: 400px) {/
+    .footer {
+        z-index: 13 background-color: #333;
+        color: #fff;
+        left: 150px;
+        border-top: 1px solid #ddd;
+        /* Top border*/
+        padding: 2rem 0;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
 .footer-content {
     display: flex;
     justify-content: space-around;
