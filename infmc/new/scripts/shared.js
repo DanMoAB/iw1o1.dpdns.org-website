@@ -56,5 +56,27 @@ function redirectToDonate() {
     window.location.href = "https://afdian.tv/a/infmc";
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const footer = document.querySelector("footer");
+
+    // 获取 footer 的顶部位置
+    const footerTop = footer.offsetTop;
+
+    // 监听滚动事件
+    window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY;
+
+        // 判断是否滚动到 footer
+        if (scrollPosition >= footerTop - sidebar.offsetHeight) {
+            // 滚动到 footer 时，将 sidebar 设置为绝对定位
+            sidebar.classList.add("sidebar-scroll");
+        } else {
+            // 滚动离开 footer 时，恢复 sidebar 的固定定位
+            sidebar.classList.remove("sidebar-scroll");
+        }
+    });
+});
+
 // 设置自动轮播定时器
 setInterval(autoSlide, 3000); // 每3秒自动切换一次

@@ -189,12 +189,9 @@ px为散射像素*/
 }
 /* 页面大纲样式*/
     .sidebar {
-    position: fixed;
-    z-index: 9;
+    position: fixed; /* 默认固定定位 */
     top: 80px;
-    /* 避免被导航栏遮挡*/
     left: 10px;
-    bottom:240px
     width: 140px;
     height: calc(300px);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
@@ -204,6 +201,12 @@ px为散射像素*/
     padding: 10px 20px;
     box-sizing: border-box;
     overflow-y: auto;
+}
+
+/* 新增动态调整的样式 */
+.sidebar-scroll {
+    position: absolute; /* 绝对定位，用于滚动到 footer 时 */
+    bottom: 100%; /* 使 sidebar 完全隐藏在 footer 上方 */
 }
 .sidebar h2 {
     font-size: 1.25rem;
