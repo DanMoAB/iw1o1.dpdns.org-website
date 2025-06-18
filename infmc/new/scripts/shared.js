@@ -55,3 +55,12 @@ function updateCarousel() {
 function redirectToDonate() {
     window.location.href = "https://afdian.tv/a/infmc";
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const toggleButton = document.querySelector(".toggle-sidebar");
+
+    // 切换折叠状态
+    toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+    });
+});

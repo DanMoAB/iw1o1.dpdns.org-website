@@ -189,11 +189,10 @@ px为散射像素*/
 }
 /* 页面大纲样式*/
     .sidebar {
-    position: fixed; /* 默认固定定位 */
+    position: fixed;
     top: 80px;
     left: 10px;
     width: 140px;
-    bottom:340px
     height: calc(300px);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     backdrop-filter: blur(10px);
@@ -202,16 +201,19 @@ px为散射像素*/
     padding: 10px 20px;
     box-sizing: border-box;
     overflow-y: auto;
+    transition: width 0.3s ease; /* 添加宽度变化的过渡效果 */
 }
 
 .sidebar h2 {
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
+
 .sidebar ul {
     list-style: none;
     padding: 0;
 }
+
 .sidebar ul li a {
     text-decoration: none;
     color: #fff;
@@ -219,8 +221,37 @@ px为散射像素*/
     display: block;
     margin-bottom: 5px;
 }
+
 .sidebar ul li a:hover {
     text-decoration: underline;
+}
+
+/* 折叠按钮样式 */
+.toggle-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* 折叠状态下的 sidebar 样式 */
+.sidebar.collapsed {
+    width: 40px; /* 折叠后的宽度 */
+    overflow: hidden; /* 隐藏内容 */
+}
+
+.sidebar.collapsed h2, .sidebar.collapsed ul {
+    display: none; /* 隐藏标题和列表 */
+}
+
+.sidebar.collapsed .toggle-sidebar {
+    right: -10px; /* 调整按钮位置 */
 }
 .main-content {
     margin-left: 140px;
@@ -257,18 +288,6 @@ px为散射像素*/
     margin-top: 2rem;
     /* Space between content and footer*/
     
-}
-@media screen and (orientation: landscape) and (max-height: 400px) {/
-    .footer {
-        z-index: 13 background-color: #333;
-        color: #fff;
-        padding-left: 150px;
-        border-top: 1px solid #ddd;
-        /* Top border*/
-        padding: 2rem 0;
-        text-align: center;
-        margin-top: 2rem;
-    }
 }
 
 .footer-content {
