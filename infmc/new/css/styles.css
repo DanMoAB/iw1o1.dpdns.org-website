@@ -189,35 +189,8 @@ px为散射像素*/
 }
 /* 页面大纲样式*/
     .sidebar {
-    /*.navbar {
-    background: rgba(255, 255, 255, 0.01);
-     半透明白色背景，最后一个参数为不透明度
-    backdrop-filter: blur(10px);
-     背景模糊效果， {n}px为散射像素
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
-     固定在页面顶部
-    top: 10px;
-     距离页面顶部的间距
-    left: 10px;
-     距离页面左侧的间距
-    right: 10px;
-     距离页面右侧的间距
-    z-index: 15;
-     确保导航栏在页面内容上方
-    border-radius: 50px;
-     胶囊形状
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-     添加阴影效果
-    max-width: calc(100% - 20px);
-     限制最大宽度，确保左右间距
-    margin: 0 auto;
-     水平居中
-    */
-    position: fixed;
+    z-index: 9;
     top: 80px;
     /* 避免被导航栏遮挡*/
     left: 10px;
