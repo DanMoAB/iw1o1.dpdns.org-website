@@ -262,7 +262,7 @@ px为散射像素*/
     .footer {
         z-index: 13 background-color: #333;
         color: #fff;
-        left: 150px;
+        padding-left: 150px;
         border-top: 1px solid #ddd;
         /* Top border*/
         padding: 2rem 0;
