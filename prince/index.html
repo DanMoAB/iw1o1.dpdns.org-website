@@ -71,7 +71,7 @@
             position: fixed;
             top: 80px;
             left: 10px;
-            width: 160px;
+            width: 180px;
             height: 320px;
             background: #fff;
             overflow-y: auto;
@@ -216,6 +216,8 @@
                 const img = document.createElement('img');
                 // 设置图片的src属性
                 img.src = `https://prince.iw1o1.dpdns.org/res/${i.toString().padStart(3, '0')}.jpg`;
+                img.style.width = '80%';
+                img.style.height = '80%';
 
                 // 检查是否需要添加标题和锚点
                 if (specialImages.includes(i)) {
@@ -229,10 +231,11 @@
                     const iframe = document.createElement('iframe');
                     iframe.src = `https://player.bilibili.com/player.html?bvid=BV1H64y1f73s&p=${chapterCount + 1}&danmaku=0&autoplay=0`;
                     iframe.frameBorder = '0'; // 去掉边框
-                    iframe.width = '100%'; // 设置宽度
-                    iframe.height = '315'; // 设置高度
                     iframe.style.display = 'block'; // 确保视频独占一行
                     iframe.style.margin = '10px auto'; // 添加外边距
+                    iframe.style.width = '80%'; // 设置宽度为容器宽度
+                    iframe.style.height = '80%'; // 初始高度
+                    iframe.style.aspectRatio = '16 / 9'; // 设置宽高比为16:9
                     container.appendChild(iframe); // 将iframe添加到容器中
                     chapterCount ++; 
                 }
