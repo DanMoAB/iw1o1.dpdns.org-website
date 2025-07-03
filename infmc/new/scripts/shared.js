@@ -31,9 +31,7 @@ function scrollToTop() {
 }
 
 // 页面加载时默认显示首页并高亮“首页”导航链接
-window.onload = function() {
-    showSection('home');
-};
+
 
 let currentIndex = 0;
 const slides = document.querySelectorAll('.carousel-item');
@@ -66,3 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mainContent.classList.toggle("collapsed");
     });
 });
+
+window.onload = function() {
+    showSection('home');
+};
